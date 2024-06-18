@@ -30,7 +30,7 @@ For about half of the examples, the instruction begins with "Return," where the 
  - **Annotate position** the model is asked to annotate a position.
  - **Guess ELO:** the model is asked to guess the elo of the players based on a string of moves. This task could be helpful for estimating a players elo based on a very low number of games.-
  - **Guess player** the model is asked to guess the names of the players based on a sequence of moves (masters/engines).
- - **Guess moves from position:** the model is asked to predict the following sequence of n move(s) based on the elo rating of the players (can also be names of players for masters/engines). This task could be useful for an enine at specific ELO as it would probably play much more natural and human-like at specific elos.
+ - **Guess moves from position** the model is asked to predict the following sequence of n move(s) based on the elo rating of the players (can also be names of players for masters/engines). This task could be useful for an enine at specific ELO as it would probably play much more natural and human-like at specific elos.
  - **Guess moves between positions** the model is asked to guess the sequence of moves that connects two positions based on the elo rating of the players. This task should be useful for training the models ability to calculate and plan ahead.
  - **Solve puzzle** the model is asked to solve a chess puzzle (estimate the rating, puzzlethemes, openingtags). This is probably the most effective way to train the model's calculation skills and intuition.
  - **Generate puzzle** the model is asked to generate a chess puzzle.
