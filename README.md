@@ -47,10 +47,10 @@ With transformed data I mean data that is based upon raw data but where some sim
 This is the kind of data that is most often used for finetuning pretrained LLM's.
 
 ### Augmented Data
-Data that is based upon either raw or transformed data but where an LLM is used to annotate or label it. To create this data you can explain to the LLM what it should do plus some examples and then you feed it the raw/transformed data it should base its annotations on. 
+Data that is based upon either raw or transformed data but where a model is used to annotate or label it. To create this data you can explain to an LLM what it should do plus some examples and then you feed it the raw/transformed data it should base its annotations on. 
 
 ### Virtual Data
-This kind of data is not based upon existing data, it is based upon the imagination of an LLM (I know the imagination of the LLM is based on existing data but you get what I mean). The difference between augmented and virtual data is that for virtual data you don't give the model data to base its annotations on, only an explanation plus examples.
+This kind of data is not based upon existing data, it is based upon the imagination of a model (I know the imagination of the model is based on existing data but you get what I mean). The difference between augmented and virtual data is that for virtual data you don't give the model data to base its annotations on, only an explanation plus examples.
 
 
 
