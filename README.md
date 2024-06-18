@@ -15,9 +15,9 @@ This project contains the code used to create the datasets and some examples.
 You can find the full datasets here [to do].
 
 ### Data Structure
-**Instruction:** Specifies the task to be performed.
-**Input:** Provides the necessary context or initial data.
-**Output:** Contains the expected result based on the instruction and input.
+ - **Instruction:** Specifies the task to be performed.
+ - **Input:** Provides the necessary context or initial data.
+ - **Output:** Contains the expected result based on the instruction and input.
 
 For about half of the examples, the instruction begins with "Return," where the output is strictly the requested information. Without "Return," the outputs may include additional text, simulating interaction with an assistant.
 
