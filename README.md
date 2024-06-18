@@ -1,5 +1,5 @@
 # Forknight
-Forknight aims to create a highly specialized chess model leveraging various data types to maximize performance and utility. By focusing on a narrow domain with rich datasets, we aspire to develop an expert-level chess tutor that is cheap, fast, and surpasses human capabilities.
+Forknight aims to create a highly specialized chess dataset leveraging various data types to maximize utility.
 
 ## Why
 Many people argue that transformers are limited by the exponential amount of data they require and that we've already exhausted a significant portion of the available data. To explore whether this is indeed a serious bottleneck, I wanted to investigate ways to maximize the utility of the data we have and how to generate more. Chess seemed like an excellent starting point for several reasons:
