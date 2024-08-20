@@ -19,12 +19,26 @@ In the second training run I completely shuffled the puzzles and trained for 4 e
 
 ![image](https://github.com/user-attachments/assets/6242f9e1-50fd-4440-853d-481fe8463b0b)
 
-
 For comparison:
 
 ![image](https://github.com/user-attachments/assets/cb955be7-e782-454e-9956-3fdb30f02108)
 
 ![image](https://github.com/user-attachments/assets/39c1b3ec-9163-4d5a-bce7-0575040fd7ff)
+
+
+I definitely should have properly evaluated the models after exactly one epoch (5627 iters) to have a fair comparison, but I forgot to save the model at that point. The closest checkpoint I have is at 5k iters:
+| Metric | Staged (5k)     | Shuffled (5k)     |
+|------------|---------------------|-----------------------|
+| **ELO**    | 934                 | 1475                  |
+| **SCORE**  | 6.4%                | 20.8%                 |
+| **PHASE**  | 97.4%               | 97.5%                 |
+| **OPENING**| 6.6%                | 0.0%                  |
+| **GOAL**   | 38.8%               | 47.0%                 |
+| **MOTIF**  | 10.9%               | 19.7%                 |
+| **LENGTH** | 46.6%               | 53.6%                 |
+| **MATE**   | 10.6%               | 11.7%                 |
+| **MOVES**  | 5.1%                | 16.2%                 |
+| **RATING** | 683                 | 518                   |
 
 
 ## Benchmark
@@ -38,7 +52,7 @@ I evaluated the final model from the second training run using a set of 1000 tes
 7. **Puzzle Rating Estimation:** On average, the model's estimate of the puzzle rating was off by 453 Elo points.
 
 ## Conclusion
-I do not think much can be concluded from this experiment as this is one very specific task and I only did two training runs (dont really have the money to experiment further). But at least in this case it seems more advantageous to have data shuffled to prevent overfitting on a subset of the dataset. Although I still believe that curriculum learning might offer some advantages in some cases, incorporating some degree of shuffling seems essential.
+I do not think much can be concluded from this experiment as this is one very specific task and I only did two training runs (dont really have the money to experiment further). But at least in this case it clearly seems more advantageous to have data shuffled to prevent overfitting on a subset of the dataset. Although I still believe that curriculum learning might offer some advantages in some cases, incorporating some degree of shuffling seems essential.
 
 ## Credit
 Most of this code is borrowed from [karpathy/build-nanogpt](https://github.com/karpathy/build-nanogpt) and [karpathy/nanoGPT](https://github.com/karpathy/nanoGPT).
