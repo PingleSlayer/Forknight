@@ -1,57 +1,39 @@
 # Forknight
-Forknight aims to create a highly specialized chess dataset leveraging various data types to maximize utility.
+This project was created to experiment with the effects of 'curriculum learning' as opposed to random sampling for pretraining LLM's.
+My hypothesis was that a model would learn faster/more computeefficient when starting of the training on easier samples and working its way up to the harder samples.
+To test this hypothesis I created a small model (114M params) and trained it on 3.8M Lichess puzzles in the following format:
+> {"FEN":"r1bqk1nr/ppp2ppp/3p2n1/3Pp3/1bP1P3/2N3P1/PP3P1P/R1BQKBNR w KQkq - 0 7",
+> "Phase":"opening","OpeningTags":"Nimzowitsch Defense Kennedy Variation",
+> "Goal":"crushing","Motif":"fork","Length":"short","Moves":"d1a4 c8d7 a4b4","Rating":"1126"}
 
-## Why
-Many people argue that transformers are limited by the exponential amount of data they require and that we've already exhausted a significant portion of the available data. To explore whether this is indeed a serious bottleneck, I wanted to investigate ways to maximize the utility of the data we have and how to generate more. Chess seemed like an excellent starting point for several reasons:
- - The domain is well-defined and narrow.
- - High-volume datasets are readily available online.
- - High-quality data can be sourced from chess engines.
- - Simple evaluation functions make self-play and synthetic data generation straightforward.
- - I would love to be able to use an expert-level chess tutor that is cheap, fast, and superior to any human.
+## Experiment
+For the first training run I divided the puzzles into 10 different stages based on their rating and trained the model for 2 epochs.
+If you look closely at this graph you can somewhat see those stages in the loss values.
+You can probably also see in this graph that towards the end of the second epoch the model suddenly went completely of the rails to the point where it would just spam random tokens, this is probably due to overfitting on the easier puzzles.
 
+![image](https://github.com/user-attachments/assets/ae0deb1e-103d-4800-89ec-94ee21886b49)
 
-## Dataset
-This project contains the code used to create the datasets and some examples.
-You can find the full datasets here [to do].
+In the second training run I completely shuffled the puzzles and trained for 4 epochs.
 
-### Data Structure
- - **Instruction:** Specifies the task to be performed.
- - **Input:** Provides the necessary context or initial data.
- - **Output:** Contains the expected result based on the instruction and input.
-
-For about half of the examples, the instruction begins with "Return," where the output is strictly the requested information. Without "Return," the outputs may include additional text, simulating interaction with an assistant.
+![image](https://github.com/user-attachments/assets/6242f9e1-50fd-4440-853d-481fe8463b0b)
 
 
-## Tasks
+For comparison:
 
- - **Find best move** the model is asked to give the best move in a position. This task should probably increase the models intuition, ability to calculate and reasoning.
- - **Give evaluation** the model is asked to evaluate the position. This task should probably increase the models intuition, ability to calculate and reasoning.
- - **Find computerlines** the model is asked to give the top n computerlines with their corresponding evaluation. This task should probably increase the models intuition, ability to calculate and reasoning.
- - **Annotate position** the model is asked to annotate a position.
- - **Guess ELO:** the model is asked to guess the elo of the players based on a string of moves. This task could be helpful for estimating a players elo based on a very low number of games.-
- - **Guess player** the model is asked to guess the names of the players based on a sequence of moves (masters/engines).
- - **Guess moves from position** the model is asked to predict the following sequence of n move(s) based on the elo rating of the players (can also be names of players for masters/engines). This task could be useful for an enine at specific ELO as it would probably play much more natural and human-like at specific elos.
- - **Guess moves between positions** the model is asked to guess the sequence of moves that connects two positions based on the elo rating of the players. This task should be useful for training the models ability to calculate and plan ahead.
- - **Solve puzzle** the model is asked to solve a chess puzzle (estimate the rating, puzzlethemes, openingtags). This is probably the most effective way to train the model's calculation skills and intuition.
- - **Generate puzzle** the model is asked to generate a chess puzzle.
+![image](https://github.com/user-attachments/assets/cb955be7-e782-454e-9956-3fdb30f02108)
 
-## Data
-In this project I made distinctions between a few types of data: raw data, transformed data, augmented data and virtual data (these last two are also called synthetic data).
-
-### Raw Data
-The kind of data you can find on and scrape from the web. This kind of data has proven very useful for example during pretraining of large language models. 
-I do however think this pretraining can be a bit wasteful if you want a model that is more like an assistant and not just a compression of the internet.
-
-### Transformed Data
-With transformed data I mean data that is based upon raw data but where some simple techniques are used to turn it into some task that you want the assistant model to be able to do.
-This is the kind of data that is most often used for finetuning pretrained LLM's.
-
-### Augmented Data
-Data that is based upon either raw or transformed data but where a model is used to annotate or label it. To create this data you can explain to an LLM what it should do plus some examples and then you feed it the raw/transformed data it should base its annotations on. 
-
-### Virtual Data
-This kind of data is not based upon existing data, it is based upon the imagination of a model (I know the imagination of the model is based on existing data but you get what I mean). The difference between augmented and virtual data is that for virtual data you don't give the model data to base its annotations on, only an explanation plus examples.
+![image](https://github.com/user-attachments/assets/39c1b3ec-9163-4d5a-bce7-0575040fd7ff)
 
 
+## Benchmark
+I evaluated the final model from the second training run using a set of 1000 test puzzles, measuring its performance on several key metrics:
+1. **Move Sequence Prediction:** The model correctly predicted 1152 out of 3686 moves, achieving a score of approximately 390/1000 (partial credit for partially correct sequences). This corresponds to a puzzle rating (Elo) of around 1826.
+2. **Phase Identification:** The model was pretty good at recognizing the game phase (e.g., opening, middlegame, rook endgame, etc.), with an accuracy of 99.3%.
+3. **Opening Identification:** The model struggled with identifying specific chess openings, achieving a correct identification rate of only 8.2%.
+4. **Goal and Length Prediction:** The model correctly identified the puzzle’s goal (e.g., mate, crushing, advantage, equality) and the expected move sequence length (e.g., one-move, short, long, very long) in about 58% of the puzzles.
+5. **Motif Identification:** The model correctly identified tactical motifs (e.g., sacrifice, advanced pawn, fork, etc.) in 28% (345/1230) of the puzzles.
+6. **Mate Pattern Recognition:** The model correctly identified mate patterns (e.g., back-rank mate, Boden's mate, mate in 3, etc.) in 19% (201/1040) of the puzzles.
+7. **Puzzle Rating Estimation:** On average, the model's estimate of the puzzle rating was off by 453 Elo points.
 
-
+## Conclusion
+I do not think much can be concluded from this experiment as I only did two runs (dont have the money to experiment further). But at least in this case it seems more advantageous to have data shuffled to prevent overfitting. Although I still believe that curriculum learning might offer a better approach, incorporating some degree of shuffling seems essential to avoid model collapse and overfitting.
