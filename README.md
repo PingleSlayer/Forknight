@@ -32,7 +32,7 @@ I evaluated the final model from the second training run using a set of 1000 tes
 1. **Move Sequence Prediction:** The model correctly predicted 1152 out of 3686 moves, achieving a score of approximately 390/1000 (partial credit for partially correct sequences). This corresponds to a puzzle rating (Elo) of around 1826*. (*not very accurate but was too lazy to correctly implement it)
 2. **Phase Identification:** The model was pretty good at recognizing the game phase (e.g., opening, middlegame, rook endgame, etc.), with an accuracy of 99.3%.
 3. **Opening Identification:** The model struggled with identifying specific chess openings, achieving a correct identification rate of only 8.2%.
-4. **Goal and Length Prediction:** The model correctly identified the puzzle’s goal (e.g., mate, crushing, advantage, equality) and the expected move sequence length (e.g., one-move, short, long, very long) in about 58% of the puzzles.
+4. **Goal and Length Prediction:** The model correctly identified both the puzzle’s goal (e.g., mate, crushing, advantage, equality) and the expected move sequence length (e.g., one-move, short, long, very long) in about 58% of the puzzles.
 5. **Motif Identification:** The model correctly identified tactical motifs (e.g., sacrifice, advanced pawn, fork, etc.) in 28% (345/1230) of cases.
 6. **Mate Pattern Recognition:** The model correctly identified mate patterns (e.g., back-rank mate, Boden's mate, mate in 3, etc.) in 19% (201/1040) of cases.
 7. **Puzzle Rating Estimation:** On average, the model's estimate of the puzzle rating was off by 453 Elo points.
