@@ -11,7 +11,7 @@ For the first training run I divided the puzzles into 10 different stages based 
 If you look closely at this graph you can somewhat see those stages in the loss values.
 You can probably also see in this graph that towards the end of the second epoch the model suddenly went completely of the rails to the point where it would just spam random tokens, this is probably due to overfitting on the easier puzzles (puzzles of similar rating probably have very similar themes) and this messes up the optimisation process when it arrives at the harder puzzles.
 
-The better approach would probably be to train for a single epoch (or less) with increasing difficulty and from that point on train on a fully shuffled dataset until an optimal validation loss is achieved.
+The better approach would probably be to train for a single epoch (or less) with increasing difficulty and from that point on train on a fully shuffled dataset until an optimal validation loss is achieved. Or have some amount of puzzles from other stages sprinkled into the mix.
 
 ![image](https://github.com/user-attachments/assets/ae0deb1e-103d-4800-89ec-94ee21886b49)
 
