@@ -53,7 +53,8 @@ I do not think much can be concluded from this experiment as this is one very sp
 - **Different Amounts of Difficulty Stages:** Instead of dividing the dataset into exactly 10 difficulty levels, I want to experiment with different numbers of subsets (e.g., 2, 3, 5 or 100 stages) to see if this influences the effectiveness of curriculum learning.
 - **Hybrid Curriculum Learning:** Instead of completely seperating the different stages, each stage could include a certain percentage of puzzles from other difficulty levels. Or the stages could overlap in some degree to provide a smoother learning curve instead of dicrete boundaries between stages. This could help in preventing overfitting while still guiding the model through a structured learning process.
 - **Regularization Techniques:** Add dropout or other regularization techniques during training to mitigate overfitting, especially in the staged approach.
-- **...**
+- **Curriculum Learning During Finetuning, ...** 
+
 
 
 ## Credit
