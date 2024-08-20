@@ -53,7 +53,7 @@ I also evaluated the final model from the second training run using a set of 100
 7. **Puzzle Rating Estimation:** On average, the model's estimate of the puzzle rating was off by 453 Elo points.
 
 ## Conclusion
-I do not think much can be concluded from this experiment as this is one very specific task and I only did two training runs (dont really have the money to experiment further). But at least in this case it clearly seems more advantageous to have data shuffled for better results and to prevent overfitting on a subset of the dataset. Although I still believe that curriculum learning might offer some advantages in some cases, incorporating some degree of shuffling seems essential.
+I do not think much can be concluded from this experiment as this is one very specific task and I only did two training runs (dont really have the money to experiment further). But at least in this case its clearly more advantageous to have data shuffled for better results and to prevent overfitting on a subset of the dataset. Although I still believe that curriculum learning might offer some advantages in some cases, incorporating some degree of shuffling seems essential.
 
 ## Credit
 Most of this code is borrowed from [karpathy/build-nanogpt](https://github.com/karpathy/build-nanogpt) and [karpathy/nanoGPT](https://github.com/karpathy/nanoGPT).
