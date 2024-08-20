@@ -43,7 +43,7 @@ To measure the performance of the models, I created a validation dataset of 1000
 | **Move Sequence Prediction**| 6.4%             | 9.5%            | 16.2%           | 5.1%          | 31.3%             | N/A                 |
 | **Puzzle Rating Estimation**| ±608             | ±454            | ±518            | ±683          | ±453              | ±650                |
 
-From this table you can see by the ELO and Score that the staged approach was indeed faster at "converging/learning" due to training on the easier puzzles first. However, when it was later trained on harder puzzles, its performance dramatically decreased. In contrast, the performance of the shuffled approach steadily improved.
+From this table you can see by the ELO and Score that the staged approach was indeed faster at "converging/learning" due to training on the easier puzzles first and therefore the model could solve those puzzles earlier than the model that was also trying to learn the hard puzzles at the same time. However, when the stage method approached harder puzzles, its performance dramatically decreased. In contrast, the performance of the shuffled approach always steadily improved.
 
 
 ## Conclusion
