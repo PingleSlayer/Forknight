@@ -37,3 +37,8 @@ I evaluated the final model from the second training run using a set of 1000 tes
 
 ## Conclusion
 I do not think much can be concluded from this experiment as I only did two runs (dont have the money to experiment further). But at least in this case it seems more advantageous to have data shuffled to prevent overfitting. Although I still believe that curriculum learning might offer a better approach, incorporating some degree of shuffling seems essential to avoid model collapse and overfitting.
+
+
+## Credit
+Most of this code is borrowed from [karpathy/build-nanogpt](https://github.com/karpathy/build-nanogpt) and [karpathy/nanoGPT](https://github.com/karpathy/nanoGPT).
+
