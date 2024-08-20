@@ -9,7 +9,7 @@ To test this hypothesis I created a small model (114M params) and trained it on 
 ## Experiment
 For the first training run I divided the puzzles into 10 different stages based on their rating and trained the model for 2 epochs.
 If you look closely at this graph you can somewhat see those stages in the loss values.
-You can probably also see in this graph that towards the end of the second epoch the model suddenly went completely of the rails to the point where it would just spam random tokens, this is probably due to overfitting on the easier puzzles.
+You can probably also see in this graph that towards the end of the second epoch the model suddenly went completely of the rails to the point where it would just spam random tokens, this is probably due to overfitting on the easier puzzles and this messes up the optimisation process when it arrives at the harder puzzles.
 
 ![image](https://github.com/user-attachments/assets/ae0deb1e-103d-4800-89ec-94ee21886b49)
 
