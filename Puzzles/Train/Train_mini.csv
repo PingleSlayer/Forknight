@@ -1,0 +1,101 @@
+FEN,Phase,OpeningTags,Goal,Motif,Length,Mate,Moves,Rating
+r3k2r/pbqn1p2/1p2p3/3P2Q1/3P4/P7/1P2BPPP/2R2RK1 b kq - 0 18,middlegame,Pseudo Queens Indian Defense Other variations,mate,kingsideAttack,oneMove,mateIn1,c7h2,593
+1Q6/p3bpk1/7q/2pP4/P3R1B1/6Pp/5P1P/2R3K1 b - - 0 36,endgame,,mate,hangingPiece,long,mateIn3,h6c1 g4d1 c1d1 e4e1 d1e1,421
+r4r1k/ppp1Q2p/3p4/4p2p/4P3/2NK2P1/1q5P/5R2 w - - 0 26,endgame,,mate,,short,mateIn2,f1f8 a8f8 e7f8,817
+rnbqk2r/ppp1nB1p/6p1/4b1P1/8/8/PPP1PP1P/RNBQK1NR b KQkq - 0 7,opening,Grob Opening Grob Gambit,advantage,hangingPiece,short,,e8f7 d1d8 h8d8,668
+4r1k1/p3rpp1/2p2R2/6Bp/8/3P2Q1/PPP3PP/7K b - - 0 24,endgame,,mate,,long,backRankMate mateIn3,e7e1 g3e1 e8e1 f6f1 e1f1,662
+3rr2k/6pp/2q5/3P4/8/3Q2P1/5PP1/3R2K1 w - - 3 34,endgame,,crushing,,short,,d5c6 d8d3 d1d3,805
+4r3/pb1n1k2/1pp2npQ/3p4/7B/2P2B2/PPP2PPP/4R1K1 b - - 0 21,middlegame,,mate,,oneMove,backRankMate mateIn1,e8e1,496
+6k1/ppp2ppp/3p4/3nr3/5P2/2PB2P1/PPP3KP/3R4 b - - 0 23,endgame,,crushing,fork,short,,d5e3 g2f3 e3d1,809
+8/8/8/7p/4K2k/5P2/8/8 b - - 1 50,pawnEndgame,,crushing,advancedPawn quietMove,veryLong,,h4g3 f3f4 h5h4 f4f5 h4h3 f5f6 h3h2 e4f5 h2h1q,775
+8/8/7k/1pp4P/1P5K/8/8/8 w - - 0 51,pawnEndgame,,crushing,advancedPawn,veryLong,,b4c5 b5b4 c5c6 b4b3 c6c7 b3b2 c7c8q,752
+8/pk1b4/2p1p3/8/8/1pqNQKP1/7P/8 w - - 4 40,endgame,,crushing,fork,short,,d3c5 c3c5 e3c5,697
+6k1/8/6p1/2p3N1/1p2r3/pK1R2P1/P1P4P/8 b - - 3 35,endgame,,crushing,fork,short,,c5c4 b3a4 c4d3,835
+8/4k3/4p3/p6p/5N1b/1P2K3/P7/8 w - - 0 39,endgame,,crushing,fork,short,,f4g6 e7d6 g6h4,733
+r1bq1r1k/b4Qpp/p3p3/1p1pP3/3P4/4P1P1/PP4BP/R4RK1 w - - 0 18,middlegame,Bird Opening Dutch Variation,mate,,short,backRankMate mateIn2,f7f8 d8f8 f1f8,583
+6k1/4pp1p/3p2p1/8/1R1QP3/P4P2/KP5q/2r5 w - - 0 32,endgame,,mate,,short,mateIn2,b4b8 c1c8 b8c8,779
+1Q3Nk1/5pp1/1p5p/2p1P3/2b5/8/r4RPP/6K1 b - - 0 30,endgame,,mate,,short,mateIn2,a2a1 f2f1 a1f1,822
+7k/1R5p/p1B3p1/6P1/1P2r3/P7/4nPPK/8 b - - 8 37,endgame,,mate,,oneMove,anastasiaMate mateIn1,e4h4,536
+3r2k1/n1p3pp/1p1br3/pP3pB1/3Pq3/2P2B1P/PQ3PP1/3RR1K1 b - - 4 29,middlegame,,mate,kingsideAttack,short,mateIn2,e4e1 d1e1 e6e1,511
+6k1/8/3N2pp/2PP2n1/rP6/5P2/1R4PP/7K b - - 0 33,endgame,,mate,,short,backRankMate mateIn2,a4a1 b2b1 a1b1,632
+5rk1/p3rppp/1p1b4/2p3q1/2Pp4/1P1Q1BP1/P4PK1/R6R w - - 1 21,middlegame,,mate,kingsideAttack,oneMove,mateIn1,d3h7,808
+2q3k1/4pp1p/r2p2pn/3P4/P1r1PP2/1QN3PP/R5K1/1R6 b - - 0 25,middlegame,,advantage,,oneMove,,c4c3,713
+8/p5p1/5p1p/1pP1pP1P/p3k3/2K5/8/8 w - - 0 48,pawnEndgame,,advantage,advancedPawn,short,,c5c6 e4f5 c6c7,787
+3b4/2N3k1/p2p2pp/1p2pp2/1P2P3/5PP1/P3K2P/8 w - - 1 36,endgame,,advantage,fork,short,,c7e6 g7f7 e6d8,665
+8/5p2/K3pB2/P3P3/8/5kp1/8/8 b - - 0 50,endgame,,crushing,advancedPawn,short,,g3g2 f6d8 g2g1q,763
+8/5p2/4p3/4Pk2/R7/2B3p1/3r2P1/6K1 b - - 1 50,endgame,,mate,,short,mateIn2,d2d1 c3e1 d1e1,438
+5nk1/4Q2n/3P2p1/4B1qp/3N4/2K5/8/8 w - - 0 49,endgame,,mate,,oneMove,mateIn1,e7g7,845
+2r2r1k/1R6/pp1p3p/3Pp2q/1PP2p2/8/2Q2PPP/2R3K1 w - - 0 30,endgame,,mate,,oneMove,mateIn1,c2h7,602
+4r3/pp1R3p/2p2kp1/5p2/2N5/8/PPP3PP/1K6 b - - 5 29,endgame,,mate,,short,backRankMate mateIn2,e8e1 d7d1 e1d1,400
+1r2r1k1/p4ppp/1b4q1/8/8/3p2N1/4RPPP/4R1K1 w - - 0 28,middlegame,,mate,,short,backRankMate mateIn2,e2e8 b8e8 e1e8,681
+2b2r1k/3q3r/p2Qp3/1p1pR3/3P2P1/P1P2P2/1P3KP1/2R5 w - - 1 40,middlegame,,mate,hangingPiece kingsideAttack,oneMove,mateIn1,d6f8,693
+3Q4/8/6qp/5p1k/6p1/6P1/6PK/8 w - - 10 51,queenEndgame,,mate,,oneMove,mateIn1,d8h4,680
+rn2r1k1/pbp2ppp/1p2pn2/3qN3/3P4/P2BP3/1PQB1PPP/2R1R1K1 b - - 9 16,middlegame,Queens Gambit Declined Ragozin Defense,mate,kingsideAttack,oneMove,mateIn1,d5g2,782
+r1b1k1nr/pp1p1ppp/1q6/8/1n2P3/5N2/PP2QbPP/RNB1KB1R w KQkq - 0 10,opening,Danish Gambit Other variations,advantage,,short,,e2f2 b6f2 e1f2,646
+6k1/1p2q1pp/p1p5/2Ppr3/1P4Q1/P7/5PPP/3R2K1 b - - 1 26,endgame,,mate,,short,mateIn2,e5e1 d1e1 e7e1,668
+6r1/1b3p1k/p1q2Ppp/2p5/7R/1P5P/2PQ2PK/8 w - - 0 39,endgame,,mate,,oneMove,mateIn1,h4h6,502
+6k1/4rp1p/2B1p1p1/1P6/8/2Q3P1/r4q1P/3R3K w - - 0 35,endgame,,mate,,short,mateIn2,d1d8 e7e8 d8e8,766
+8/8/8/8/1p3KPp/7P/k7/8 w - - 1 47,pawnEndgame,,crushing,advancedPawn quietMove,veryLong,,g4g5 b4b3 g5g6 b3b2 g6g7 b2b1r g7g8q,710
+6k1/1pr3p1/1R3p1p/p7/PnP5/5P2/5KPP/2R5 b - - 3 31,endgame,,advantage,fork,short,,b4d3 f2e3 d3c1,727
+r1bq2k1/ppp1nr2/2nppQ2/5p2/3PP3/8/PPP2PP1/RN2K2R w KQ - 0 19,middlegame,Modern Defense Other variations,mate,,oneMove,mateIn1,f6h8,814
+6k1/pp3pp1/7p/3p3n/3q4/1P1B1P2/P3QP1P/6K1 w - - 1 24,endgame,,mate,,oneMove,mateIn1,e2e8,510
+4r1k1/1p4p1/4p2p/3q4/8/1P3nQ1/1B4PP/7K w - - 0 36,endgame,,mate,,oneMove,mateIn1,g3g7,596
+r3r1k1/2q2ppp/2pb4/1p4B1/pn1P4/P3QN1P/1P3PP1/2R1R1K1 w - - 2 24,middlegame,,crushing,kingsideAttack,short,,e3e8 a8e8 e1e8,705
+3r2k1/5p2/6p1/3pB1Qp/p2Pb3/R1P4P/5PPK/1q3q2 w - - 0 36,middlegame,,mate,,short,mateIn2,g5d8 g8h7 d8h8,692
+6k1/5pp1/p3p2p/2R5/2pP4/1r2PqP1/2QB1P1P/4K1n1 w - - 3 32,endgame,,mate,,oneMove,mateIn1,c5c8,787
+1r6/8/7p/8/k4P2/2K4P/p7/R7 w - - 2 49,rookEndgame,,crushing,skewer,long,,a1a2 a4b5 a2b2 b5c6 b2b8,830
+r2q1rk1/1pp2ppp/2n1b3/8/p1P1PPn1/1PQp4/PB1N2PP/2KR1B1R w - - 1 17,middlegame,Queens Gambit Declined Albin Countergambit,mate,kingsideAttack,oneMove,mateIn1,c3g7,766
+1r2r1k1/5p1p/bn3Pp1/q1p5/4Q3/2P2N2/1PB2PPP/2B1R2K w - - 1 25,middlegame,,mate,kingsideAttack,short,mateIn2,e4e8 b8e8 e1e8,600
+8/8/4K3/8/6p1/8/2k5/1R6 b - - 0 61,endgame,,crushing,advancedPawn,long,,c2b1 e6e5 g4g3 e5d4 g3g2,651
+1br3k1/pbq3pp/2p1N3/1p3r2/1P1P4/P2Q3P/5PP1/R1B2RK1 b - - 0 26,middlegame,,mate,,oneMove,mateIn1,c7h2,725
+6k1/1p4r1/p2Np2p/4P3/2PpQ1q1/5KP1/PP5P/8 w - - 2 33,endgame,,crushing,,short,,e4g4 g7g4 f3g4,670
+5r2/2k1n3/8/pR3P2/P1N1P3/2P5/5bPK/8 b - - 0 33,endgame,,mate,,oneMove,mateIn1,f8h8,721
+7r/1pp4q/p1kb4/P6R/3Pp3/4P2Q/1PPBN2p/7K b - - 0 32,middlegame,,advantage,,short,,h7h5 h3h5 h8h5,625
+2kr3r/Qpqb1ppp/8/1B6/2P1p1n1/B7/P4PPP/3R1RK1 b - - 0 18,middlegame,Caro-Kann Defense Panov Attack,mate,kingsideAttack,oneMove,mateIn1,c7h2,716
+2kr3r/R3nppp/6n1/1pP5/4P1b1/1B2B3/1PP2PPP/4K2R b K - 0 16,middlegame,Three Knights Opening Other variations,mate,,oneMove,mateIn1,d8d1,400
+6k1/p3R1N1/1p4Np/4p3/7P/5bP1/5P1K/r7 b - - 6 36,endgame,,mate,,oneMove,mateIn1,a1h1,742
+3r2k1/5ppp/8/8/1P4rP/4R3/8/4R2K w - - 1 40,rookEndgame,,mate,,short,backRankMate mateIn2,e3e8 d8e8 e1e8,675
+4R3/p2Q1r1k/6pp/8/2P5/8/q5PP/3K4 w - - 2 36,endgame,,mate,hangingPiece,oneMove,mateIn1,d7f7,671
+1k6/ppp5/3p1R2/8/PPP5/2P4r/4r1Pp/7K w - - 0 34,rookEndgame,,mate,,short,backRankMate mateIn2,f6f8 e2e8 f8e8,805
+3r2k1/5ppp/6r1/8/7Q/1Pn2q1P/P4PP1/R4RK1 w - - 0 29,middlegame,,mate,hangingPiece,oneMove,backRankMate mateIn1,h4d8,732
+r3k3/3p1p2/p2Pp1rp/1p2Q3/5p1q/5P2/PP4PP/3R1B1K w q - 7 28,endgame,,mate,,short,mateIn2,e5h8 g6g8 h8g8,756
+5rk1/p4pp1/1R1Qb2p/3nR3/7B/8/P1r2PPP/6K1 b - - 0 21,middlegame,,mate,,short,backRankMate mateIn2,c2c1 e5e1 c1e1,804
+2r2k2/pp3ppQ/4p2p/1b6/8/2P1qP2/P1B3PP/3R3K w - - 3 29,endgame,,advantage,skewer,short,,h7h8 f8e7 h8c8,781
+2r2rk1/1p3pp1/p2P3p/P1P5/4p3/4q3/6Q1/R5RK w - - 0 36,endgame,,mate,,oneMove,mateIn1,g2g7,482
+5r1b/kp1n1q1P/p3p1BQ/3pP3/3P4/7R/PPN5/1K3R2 b - - 0 39,middlegame,,advantage,,short,,f7f1 c2e1 f1e1,659
+6k1/p4pp1/6rp/3p2r1/4P3/P2B4/1P2Q2P/6RK b - - 0 34,endgame,,mate,,oneMove,mateIn1,g5g1,399
+R7/8/4p3/p5rk/1p3K2/8/8/8 w - - 2 50,rookEndgame,,crushing,,long,,a8h8 h5g6 h8g8 g6f6 g8g5,759
+5r1k/6pp/p7/8/1P6/P6P/4QqP1/6K1 w - - 3 34,endgame,,crushing,,short,,e2f2 f8f2 g1f2,585
+4k3/4p2p/1pp1b1p1/8/2P1nB2/7P/PbN3P1/3R3K b - - 3 29,endgame,,crushing,fork,short,,e4f2 h1g1 f2d1,839
+2k4r/1pp1Bqpp/p4p2/8/4nP2/3R3P/PPP1N1P1/3R2K1 w - - 4 22,middlegame,,mate,queensideAttack,short,mateIn2,d3d8 h8d8 d1d8,681
+2R5/p1p3kp/3p2b1/2bPp3/2p3P1/8/P6P/3R3K b - - 2 35,endgame,,mate,,oneMove,doubleBishopMate mateIn1,g6e4,526
+1br3k1/pb2qppp/1p2pn2/8/1P6/P1Q1PN2/1B2BPPP/2R3K1 w - - 2 20,middlegame,Zukertort Opening Other variations,crushing,,short,,c3c8 b7c8 c1c8,623
+1r1k4/1pp3p1/3p2Bp/p2P4/P4r2/1K1P4/1PP5/4R3 w - - 1 28,endgame,,crushing,skewer,short,,e1e8 d8d7 e8b8,743
+1k6/p1r3pp/1pB3n1/q2QP3/3P4/1R6/P5PP/6K1 b - - 0 29,endgame,,mate,,oneMove,mateIn1,a5e1,799
+3q1rk1/p4ppp/1pr1pn2/2b5/2PN4/1P4P1/PB1PQP1P/R4RK1 b - - 0 16,middlegame,English Opening Agincourt Defense,advantage,,short,,c5d4 b2d4 d8d4,769
+2r3k1/R4pp1/4p2p/8/1P6/8/PP3PPP/6K1 b - - 0 23,rookEndgame,,mate,,oneMove,backRankMate mateIn1,c8c1,584
+8/p1k2rp1/R6p/8/4KPp1/8/5P1P/8 w - - 0 35,rookEndgame,,crushing,skewer,short,,a6a7 c7d6 a7f7,684
+2r3k1/4nppp/p2Rq3/1p2P3/2r2P2/P4QB1/1P5P/K3R3 b - - 6 33,middlegame,,mate,,short,mateIn2,c4c1 e1c1 c8c1,671
+7k/1R5p/p5p1/1p3p2/1P1rpb2/P3P2P/B4PP1/6K1 b - - 0 31,endgame,,mate,,oneMove,mateIn1,d4d1,401
+5k2/ppr2p2/4p1pp/3pP3/3P4/P1r1P1P1/3K3P/1RR5 w - - 0 33,rookEndgame,,crushing,,short,,c1c3 c7c3 d2c3,821
+5R2/6p1/2B1N1k1/8/7p/4P2P/5nPK/1r6 b - - 0 36,endgame,,mate,,oneMove,mateIn1,b1h1,656
+8/ppR5/8/1P6/2P2r1P/3k4/P7/3K4 b - - 3 44,rookEndgame,,mate,,oneMove,mateIn1,f4f1,399
+4r2k/4Q1pp/2p2pb1/1q1p4/1P1B4/2P2P2/6PP/4R1K1 w - - 3 31,endgame,,mate,,short,backRankMate mateIn2,e7e8 g6e8 e1e8,581
+6k1/6pp/1P2p3/K2p4/N7/8/8/r7 w - - 3 53,endgame,,advantage,advancedPawn,short,,b6b7 g8f7 b7b8q,655
+3r2k1/3r1ppp/p3b3/1p6/4P3/P1PpRP2/1P4PP/4RNK1 b - - 0 24,endgame,,advantage,advancedPawn,short,,d3d2 f1d2 d7d2,678
+5k1r/rp2bpqp/7p/8/3R4/5bP1/P1PQ1P1P/1R4K1 w - - 0 24,middlegame,,mate,sacrifice,short,mateIn2,d4d8 e7d8 d2d8,571
+3Q4/7p/3p2qP/2pP1k2/P4p1K/1P4p1/6P1/8 b - - 5 47,queenEndgame,,mate,,oneMove,mateIn1,g6h6,817
+r1b3k1/pp6/4p1P1/3p3p/3Pp3/1PQ1b1q1/PB4NR/6K1 w - - 5 35,middlegame,,crushing,,short,,c3e3 g3e3 g2e3,712
+6k1/4rppn/1p6/p1p3p1/5qP1/8/P1Q2PK1/7R w - - 0 44,endgame,,mate,,short,mateIn2,c2h7 g8f8 h7h8,683
+8/1p4k1/5rp1/3Q3p/8/6P1/2r5/5R1K b - - 0 48,queenRookEndgame,,mate,hangingPiece,oneMove,mateIn1,f6f1,691
+5rk1/p4rpp/b1p5/3p4/4p1Q1/PP2R3/6PP/1R4K1 b - - 0 28,endgame,,mate,,short,mateIn2,f7f1 b1f1 f8f1,641
+6k1/4rppp/p7/1pR5/8/2P2BP1/b4PKP/8 w - - 0 26,endgame,,mate,,short,backRankMate mateIn2,c5c8 e7e8 c8e8,661
+r6k/1p2q1p1/p1p4p/3nP3/1P1P2bN/P7/2B3PP/R1R3K1 w - - 3 26,middlegame,,crushing,fork,short,,h4g6 h8g8 g6e7,573
+5k2/p4p2/b2N1Ppp/3P4/6P1/7P/2rr2B1/4R2K w - - 7 40,endgame,,mate,,oneMove,mateIn1,e1e8,539
+3r1rk1/1p3p1p/p2p1p1Q/4p1q1/nP6/3B1P2/P1P3PP/3R1RK1 w - - 2 21,middlegame,,mate,kingsideAttack,oneMove,mateIn1,h6h7,826
+1r6/8/4p3/p1p1N2p/1k2P2P/1P1P1P2/2P2K2/8 w - - 1 35,endgame,,crushing,fork,short,,e5c6 b4c3 c6b8,835
+4r1k1/3n2pp/p2b4/3N4/3P4/2P4P/PR3PP1/6K1 b - - 0 26,endgame,,mate,,oneMove,mateIn1,e8e1,668
+1r3rk1/pp3pp1/3p4/3Np1p1/3nP3/3P1B2/PPP5/1K4R1 w - - 1 24,endgame,,mate,,short,anastasiaMate mateIn2,d5e7 g8h7 g1h1,823
+8/2r4p/4k1p1/pbpN4/8/2K2B1P/6P1/8 w - - 2 43,endgame,,crushing,fork hangingPiece,short,,d5c7 e6e5 c7b5,812
+8/6p1/6k1/5R1p/4K2P/4P1P1/r4P2/8 b - - 0 59,rookEndgame,,crushing,,short,,a2a4 e4e5 a4a5,703
+8/4pk2/2Bpn1p1/8/2P3P1/3P1K2/8/8 b - - 4 45,endgame,,crushing,fork,short,,e6d4 f3e4 d4c6,700
