@@ -28,30 +28,22 @@ For comparison:
 
 
 ## Benchmark
-I definitely should have properly evaluated the models after exactly one epoch (5627 iters) to have a fair comparison, but I forgot to save the model at that point. The closest checkpoint I have is at 5k iters:
-| Metric | Staged (5k)     | Shuffled (5k)     |
-|------------|---------------------|-----------------------|
-| **ELO**    | 934                 | 1475                  |
-| **SCORE**  | 6.4%                | 20.8%                 |
-| **PHASE**  | 97.4%               | 97.5%                 |
-| **OPENING**| 6.6%                | 0.0%                  |
-| **GOAL**   | 38.8%               | 47.0%                 |
-| **MOTIF**  | 10.9%               | 19.7%                 |
-| **LENGTH** | 46.6%               | 53.6%                 |
-| **MATE**   | 10.6%               | 11.7%                 |
-| **MOVES**  | 5.1%                | 16.2%                 |
-| **RATING** | 683                 | 518                   |
+To measure the performance of the models, I created a validation dataset of 1000 puzzles (not included in the training data) to evaluate the output when the model is only given the FEN. Ideally, I should have properly evaluated the models after exactly one epoch (5627 iterations) to ensure a fair comparison, but I forgot to save the model at that point. The closest checkpoint I have is at 5k iters.
 
+| **Metric**                 | **Shuffled 2.5k** | **Staged 2.5k** | **Shuffled 5k** | **Staged 5k** | **Shuffled Final**| **Random Guessing** |
+|----------------------------|-------------------|-----------------|-----------------|---------------|-------------------|---------------------|
+| **ELO**                    | 1010              | 1252            | 1475            | 934           | 1827              | N/A                 | 
+| **SCORE**                  | 8.8%              | 12.0%           | 20.8%           | 6.4%          | 39.0%             | N/A                 |
+| **Phase Identification**   | 96.6%             | 96.0%           | 97.5%           | 97.4%         | 99.3%             | 11.11%              |
+| **Opening Identification** | 0.0%              | 0.0%            | 0.0%            | 6.6%          | 8.2%              | N/A                 |
+| **Goal Identification**    | 38.9%             | 38.3%           | 47.0%           | 38.8%         | 58.0%             | 25%                 |
+| **Motif Identification**   | 14.1%             | 13.3%           | 19.7%           | 10.9%         | 28.0%             | 4.35%               |
+| **Length Identification**  | 47.9%             | 53.5%           | 53.6%           | 46.6%         | 58.0%             | 25%                 |
+| **Mate Pattern Recognition**| 8.5%             | 6.1%            | 11.7%           | 10.6%         | 19.3%             | 7.69%               |
+| **Move Sequence Prediction**| 6.4%             | 9.5%            | 16.2%           | 5.1%          | 31.3%             | N/A                 |
+| **Puzzle Rating Estimation**| ±608             | ±454            | ±518            | ±683          | ±453              | ±650                |
+From this table you can see that the staged approach was indeed faster at converging/learning due to training on the easier puzzles first. However, when it was later trained on harder puzzles, its performance dramatically decreased. In contrast, the performance of the shuffled approach steadily improved.
 
-I also evaluated the final model from the second training run using a set of 1000 test puzzles by giving it only the FEN's, to measure its performance:
-1. **Move Sequence Prediction:** The model correctly predicted 1152 out of 3686 moves, achieving a score of approximately 390/1000 (partial credit for partially correct sequences). This corresponds to a puzzle rating (Elo) of around 1826*. (*not very accurate but was too lazy to correctly implement it)
-2. **Phase Identification:** The model was pretty good at recognizing the game phase (e.g., opening, middlegame, rook endgame, etc.), with an accuracy of 99.3%. (random uniform guessing would be 11.11%)
-3. **Opening Identification:** The model struggled with identifying specific chess openings, achieving a correct identification rate of only 8.2%. 
-4. **Goal Identification:** The model correctly identified the puzzle’s goal (e.g., mate, crushing, advantage, equality) in about 58% of the puzzles. (random uniform guessing would be 25%)
-5. **Length Identification:** The model correctly identified both the puzzle’s move sequence length (e.g., one-move, short, long, very long) in about 58% of the puzzles. (random uniform guessing would be 25%)
-6. **Motif Identification:** The model correctly identified tactical motifs (e.g., sacrifice, advanced pawn, fork, etc.) in 28% (345/1230) of cases. (random uniform guessing would be 4.35%)
-7. **Mate Pattern Recognition:** The model correctly identified mate patterns (e.g., back-rank mate, Boden's mate, mate in 3, etc.) in 19% (201/1040) of cases. (random uniform guessing would be 7.69%)
-8. **Puzzle Rating Estimation:** On average, the model's estimate of the puzzle rating was off by 453 Elo points.
 
 ## Conclusion
 I do not think much can be concluded from this experiment as this is one very specific task and I only did two training runs (dont really have the money to experiment further). But at least in this case its clearly more advantageous to have data shuffled for better results and to prevent overfitting on a subset of the dataset. Although I still believe that curriculum learning might offer some advantages in some cases, incorporating some degree of shuffling seems essential.
