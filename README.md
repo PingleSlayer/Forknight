@@ -42,6 +42,7 @@ To measure the performance of the models, I created a validation dataset of 1000
 | **Mate Pattern Recognition**| 8.5%             | 6.1%            | 11.7%           | 10.6%         | 19.3%             | 7.69%               |
 | **Move Sequence Prediction**| 6.4%             | 9.5%            | 16.2%           | 5.1%          | 31.3%             | N/A                 |
 | **Puzzle Rating Estimation**| ±608             | ±454            | ±518            | ±683          | ±453              | ±650                |
+
 From this table you can see that the staged approach was indeed faster at converging/learning due to training on the easier puzzles first. However, when it was later trained on harder puzzles, its performance dramatically decreased. In contrast, the performance of the shuffled approach steadily improved.
 
 
