@@ -33,7 +33,7 @@ To measure the performance of the models, I created a validation dataset of 1000
 | **Metric**                 | **Shuffled 2.5k** | **Staged 2.5k** | **Shuffled 5k** | **Staged 5k** | **Shuffled Final**| **Random Guessing** |
 |----------------------------|-------------------|-----------------|-----------------|---------------|-------------------|---------------------|
 | **ELO**                    | 1010              | 1252            | 1475            | 934           | 1827              | N/A                 | 
-| **SCORE**                  | 8.8%              | 12.0%           | 20.8%           | 6.4%          | 39.0%             | N/A                 |
+| **Score**                  | 8.8%              | 12.0%           | 20.8%           | 6.4%          | 39.0%             | N/A                 |
 | **Phase Identification**   | 96.6%             | 96.0%           | 97.5%           | 97.4%         | 99.3%             | 11.11%              |
 | **Opening Identification** | 0.0%              | 0.0%            | 0.0%            | 6.6%          | 8.2%              | N/A                 |
 | **Goal Identification**    | 38.9%             | 38.3%           | 47.0%           | 38.8%         | 58.0%             | 25%                 |
@@ -43,7 +43,7 @@ To measure the performance of the models, I created a validation dataset of 1000
 | **Move Sequence Prediction**| 6.4%             | 9.5%            | 16.2%           | 5.1%          | 31.3%             | N/A                 |
 | **Puzzle Rating Estimation**| ±608             | ±454            | ±518            | ±683          | ±453              | ±650                |
 
-From this table you can see that the staged approach was indeed faster at converging/learning due to training on the easier puzzles first. However, when it was later trained on harder puzzles, its performance dramatically decreased. In contrast, the performance of the shuffled approach steadily improved.
+From this table you can see by the ELO and Score that the staged approach was indeed faster at "converging/learning" due to training on the easier puzzles first. However, when it was later trained on harder puzzles, its performance dramatically decreased. In contrast, the performance of the shuffled approach steadily improved.
 
 
 ## Conclusion
