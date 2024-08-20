@@ -36,7 +36,7 @@ I evaluated the final model from the second training run using a set of 1000 tes
 7. **Puzzle Rating Estimation:** On average, the model's estimate of the puzzle rating was off by 453 Elo points.
 
 ## Conclusion
-I do not think much can be concluded from this experiment as I only did two runs (dont have the money to experiment further). But at least in this case it seems more advantageous to have data shuffled to prevent overfitting. Although I still believe that curriculum learning might offer some advantages, incorporating some degree of shuffling seems essential to avoid model collapse and overfitting.
+I do not think much can be concluded from this experiment as I only did two runs (dont have the money to experiment further). But at least in this case it seems more advantageous to have data shuffled to prevent overfitting. Although I still believe that curriculum learning might offer some advantages in some cases, incorporating some degree of shuffling seems essential to avoid model collapse and overfitting.
 
 
 ## Credit
