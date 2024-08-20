@@ -26,6 +26,8 @@ For comparison:
 ![image](https://github.com/user-attachments/assets/39c1b3ec-9163-4d5a-bce7-0575040fd7ff)
 
 
+
+## Benchmark
 I definitely should have properly evaluated the models after exactly one epoch (5627 iters) to have a fair comparison, but I forgot to save the model at that point. The closest checkpoint I have is at 5k iters:
 | Metric | Staged (5k)     | Shuffled (5k)     |
 |------------|---------------------|-----------------------|
@@ -41,8 +43,7 @@ I definitely should have properly evaluated the models after exactly one epoch (
 | **RATING** | 683                 | 518                   |
 
 
-## Benchmark
-I evaluated the final model from the second training run using a set of 1000 test puzzles by giving it only the FEN's, to measure its performance:
+I also evaluated the final model from the second training run using a set of 1000 test puzzles by giving it only the FEN's, to measure its performance:
 1. **Move Sequence Prediction:** The model correctly predicted 1152 out of 3686 moves, achieving a score of approximately 390/1000 (partial credit for partially correct sequences). This corresponds to a puzzle rating (Elo) of around 1826*. (*not very accurate but was too lazy to correctly implement it)
 2. **Phase Identification:** The model was pretty good at recognizing the game phase (e.g., opening, middlegame, rook endgame, etc.), with an accuracy of 99.3%.
 3. **Opening Identification:** The model struggled with identifying specific chess openings, achieving a correct identification rate of only 8.2%.
