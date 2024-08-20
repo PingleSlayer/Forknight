@@ -47,13 +47,13 @@ From this table you can see by the ELO and Score that the staged approach was in
 
 
 ## Conclusion
-I do not think much can be concluded from this experiment as this is one very specific task and I only did two training runs (dont really have the money to experiment further). But at least in this case its clearly more advantageous to have data shuffled for better results and to prevent overfitting on a subset of the dataset. Although I still believe that curriculum learning might offer some advantages in some cases, incorporating some degree of shuffling seems essential.
+I do not think much can be concluded from this experiment as this is one very specific task and I only did two training runs (dont really have the money to experiment further). But at least in this case its clearly more advantageous to have data shuffled for better results and to prevent overfitting on a subset of the dataset. Although I still believe that curriculum learning might offer some advantages in some cases, incorporating some degree of shuffling seems essential. 
 
 ## TODO 
-- **Experiment with Different Amounts of Difficulty Stages:** Instead of dividing the dataset into exactly 10 difficulty levels, experiment with different numbers of subsets (e.g., 2, 3, 5,... stages) to see if this influences the effectiveness of curriculum learning.
-- **Hybrid Curriculum Learning:** Implement a curriculum learning approach where each stage includes a certain percentage of puzzles from other difficulty levels. This could help in preventing overfitting while still guiding the model through a structured learning process.
-- **Implement Regularization Techniques:** Add dropout or other regularization techniques during training to mitigate overfitting, especially in the staged approach.
-- ...
+- **Different Amounts of Difficulty Stages:** Instead of dividing the dataset into exactly 10 difficulty levels, I want to experiment with different numbers of subsets (e.g., 2, 3, 5 or 100 stages) to see if this influences the effectiveness of curriculum learning.
+- **Hybrid Curriculum Learning:** Instead of completely seperating the different stages, each stage could include a certain percentage of puzzles from other difficulty levels. Or the stages could overlap in some degree to provide a smoother learning curve instead of dicrete boundaries between stages. This could help in preventing overfitting while still guiding the model through a structured learning process.
+- **Regularization Techniques:** Add dropout or other regularization techniques during training to mitigate overfitting, especially in the staged approach.
+- **...**
 
 
 ## Credit
