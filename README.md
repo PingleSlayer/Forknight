@@ -28,7 +28,7 @@ For comparison:
 
 
 ## Benchmark
-I evaluated the final model from the second training run using a set of 1000 test puzzles, measuring its performance on several key metrics:
+I evaluated the final model from the second training run using a set of 1000 test puzzles by giving it only the FEN's, to measure its performance:
 1. **Move Sequence Prediction:** The model correctly predicted 1152 out of 3686 moves, achieving a score of approximately 390/1000 (partial credit for partially correct sequences). This corresponds to a puzzle rating (Elo) of around 1826*. (*not very accurate but was too lazy to correctly implement it)
 2. **Phase Identification:** The model was pretty good at recognizing the game phase (e.g., opening, middlegame, rook endgame, etc.), with an accuracy of 99.3%.
 3. **Opening Identification:** The model struggled with identifying specific chess openings, achieving a correct identification rate of only 8.2%.
