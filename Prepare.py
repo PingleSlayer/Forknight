@@ -10,9 +10,9 @@ from Tokenizer import Tokenizer
 # Configuration
 local_dir = "puzzles_dicts_tokens"
 shard_size = int(1e8)       # 100M tokens per shard
-mode = "shuffled"           # shuffled / sorted / staged_n
+mode = "biased_1_1"           # shuffled / sorted / staged_n (n: number of stages) / biased_b_n (b: bias, n: number of iterations)
 epochs = 4
-csv_path = "Puzzles/Train/train.csv"
+csv_path = "Puzzles/Benchmark/puzzle_bench.csv"
 
 # Create the cache directory if it doesn't exist
 DATA_CACHE_DIR = os.path.join(os.path.dirname(__file__), local_dir)
@@ -59,6 +59,23 @@ def staged_data(data, n):
     shuffled_chunks = [chunk.sample(frac=1).reset_index(drop=True) for chunk in chunks]
     return pd.concat(shuffled_chunks).reset_index(drop=True)
 
+def biased_sort_data(data, bias_strength, iterations):
+    """Sorts the DataFrame using a biased sort over multiple iterations."""
+    positions = np.zeros(len(data))
+    
+    for _ in range(iterations):
+        shuffled_indices = data.index.to_list()
+        random.shuffle(shuffled_indices)
+        
+        for i, idx in enumerate(shuffled_indices):
+            biased_value = data.loc[idx, 'Rating'] + bias_strength * random.uniform(-data.loc[idx, 'Rating'], data.loc[idx, 'Rating'])
+            positions[idx] += biased_value
+    
+    sorted_indices = np.argsort(positions)
+    sorted_data = data.iloc[sorted_indices].reset_index(drop=True)
+    
+    return sorted_data
+
 if __name__ == "__main__":
 
     df = pd.DataFrame([])
@@ -68,11 +85,25 @@ if __name__ == "__main__":
         elif mode == "sorted":
             df = pd.concat([df, sort_data(og_df)])
         elif "staged" in mode:
+            if len(mode.split('_')) != 2:
+                print(f"Error> number of arguments for staged should be 2: {mode}")
+                exit()
             n = int(mode.split('_')[1])
             if isinstance(n, int):
                 df = pd.concat([df, staged_data(og_df, n)])
             else:
                 print(f"Error> invalid n: {n}")
+                exit()
+        elif "biased" in mode:
+            if len(mode.split('_')) != 3:
+                print(f"Error> number of arguments for biased should be 3: {mode}")
+                exit()
+            b = float(mode.split('_')[1])
+            n = int(mode.split('_')[2])
+            if isinstance(n, int) and isinstance(b, float):
+                df = pd.concat([df, biased_sort_data(og_df, b, n)])
+            else:
+                print(f"Error> invalid n or b: {n}, {b}")
                 exit()
         else:
             print(f"Error> invalid mode: {mode}")
